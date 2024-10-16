@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWS-like Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <header class="top-nav">
+        <div class="logo">My AWS Dashboard</div>
+        <nav>
+            <ul>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Notifications</a></li>
+                <li><a href="#">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <ul>
+            <li><a href="#">EC2</a></li>
+            <li><a href="#">S3</a></li>
+            <li><a href="#">RDS</a></li>
+            <li><a href="#">IAM</a></li>
+            <li><a href="#">CloudWatch</a></li>
+        </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+        <h1>Service Usage Overview</h1>
+        <div class="card">
+            <h2>Running EC2 Instances</h2>
+            <canvas id="ec2Chart"></canvas>
+        </div>
+        <div class="card">
+            <h2>S3 Storage Used</h2>
+            <canvas id="s3Chart"></canvas>
+        </div>
+        <div class="card">
+            <h2>RDS Connections</h2>
+            <canvas id="rdsChart"></canvas>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 My AWS-like Dashboard. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

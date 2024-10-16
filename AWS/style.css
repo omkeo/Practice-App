@@ -1,0 +1,139 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* AWS Color Palette */
+:root {
+    --aws-blue: #1e4c7e;
+    --aws-light-blue: #00bcf2;
+    --aws-orange: #f58536;
+    --aws-gray: #f3f4f6;
+    --aws-dark-gray: #2d3748;
+    --aws-white: #ffffff;
+}
+
+/* Top Navigation Bar */
+.top-nav {
+    background-color: var(--aws-dark-gray);
+    color: var(--aws-white);
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav .logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.top-nav nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.top-nav nav ul li {
+    margin-left: 20px;
+}
+
+.top-nav nav ul li a {
+    color: var(--aws-white);
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.top-nav nav ul li a:hover {
+    color: var(--aws-orange);
+}
+
+/* Sidebar */
+.sidebar {
+    background-color: var(--aws-blue);
+    color: var(--aws-white);
+    width: 220px;
+    height: 100vh;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    padding-top: 20px;
+    transition: width 0.3s ease;
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px;
+}
+
+.sidebar ul li a {
+    color: var(--aws-white);
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+    background-color: var(--aws-light-blue);
+}
+
+/* Main Content */
+.main-content {
+    margin-left: 240px;
+    padding: 40px;
+    background-color: var(--aws-gray);
+    min-height: 100vh;
+}
+
+.main-content h1 {
+    font-size: 28px;
+    color: var(--aws-dark-gray);
+    margin-bottom: 20px;
+}
+
+.card {
+    background-color: var(--aws-white);
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+}
+
+.card h2 {
+    font-size: 20px;
+    color: var(--aws-dark-gray);
+    margin-bottom: 15px;
+}
+
+.card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: var(--aws-dark-gray);
+    color: var(--aws-white);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .main-content {
+        margin-left: 0;
+    }
+}
